@@ -8,20 +8,23 @@ while (userName === ''){
 // console.log(userName);
 alert('Hi there, ' + userName + ' welcome to my website. Have a wonderful day and thanks for visiting.');
 
+function dogs() {
+  let likeDogs = prompt('Do you think I like dogs?').toLowerCase();
+  while (likeDogs !== 'no' && likeDogs !== 'n' && likeDogs !== 'yes' && likeDogs !== 'y'){
+    likeDogs = prompt('I do not understand. Please reply with a yes or no ' + userName + '.').toLowerCase();}
+  //console.log(likeDogs);
+  if (likeDogs === 'yes' || likeDogs === 'y')
+  { //console.log('That is correct I do like dogs.');
+    alert('That is correct I do like dogs ' + userName + '.');
+    correctAnswers++;
+  }
+  if (likeDogs === 'no' || likeDogs === 'n')
+  { //console.log('That is correct. I do not like dogs ... I LOVE them.');
+    alert('That is correct ' + userName + '. I do not like dogs ... I LOVE them.');
+  }
+}
 
-let likeDogs = prompt('Do you think I like dogs?').toLowerCase();
-while (likeDogs !== 'no' && likeDogs !== 'n' && likeDogs !== 'yes' && likeDogs !== 'y'){
-  likeDogs = prompt('I do not understand. Please reply with a yes or no ' + userName + '.').toLowerCase();}
-//console.log(likeDogs);
-if (likeDogs === 'yes' || likeDogs === 'y')
-{ //console.log('That is correct I do like dogs.');
-  alert('That is correct I do like dogs ' + userName + '.');
-  correctAnswers++;
-}
-if (likeDogs === 'no' || likeDogs === 'n')
-{ //console.log('That is correct. I do not like dogs ... I LOVE them.');
-  alert('That is correct ' + userName + '. I do not like dogs ... I LOVE them.');
-}
+dogs();
 
 let service = prompt('Did I serve in the US military?').toLowerCase();
 while (service !== 'no' && service !== 'n' && service !== 'yes' && service !== 'y'){ 
