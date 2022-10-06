@@ -9,7 +9,6 @@ while (userName === ''){
 alert('Hi there, ' + userName + ' welcome to my website. Have a wonderful day and thanks for visiting.');
 
 function dogs() {
-
   let likeDogs = prompt('Do you think I like dogs?').toLowerCase();
   while (likeDogs !== 'no' && likeDogs !== 'n' && likeDogs !== 'yes' && likeDogs !== 'y'){
     likeDogs = prompt('I do not understand. Please reply with a yes or no ' + userName + '.').toLowerCase();}
@@ -27,8 +26,7 @@ function dogs() {
 
 dogs();
 
-function militaryService() {
-
+function guessService() {
   let service = prompt('Did I serve in the US military?').toLowerCase();
   while (service !== 'no' && service !== 'n' && service !== 'yes' && service !== 'y'){ 
     service = prompt('Please reply with a yes or a no ' + userName + '. Thanks!').toLowerCase();}
@@ -44,10 +42,9 @@ function militaryService() {
   }
 }
 
-militaryService();
+guessService();
 
-function homeTown() {
-
+function guessHome() {
   let homeTown = prompt('Do you think I am from Illinois?').toUpperCase();
   while (homeTown !== 'NO' && homeTown !== 'N' && homeTown !== 'YES' && homeTown !== 'Y'){
     homeTown = prompt('Please answer with a yes or a no... Thank you!').toUpperCase();
@@ -64,7 +61,7 @@ function homeTown() {
   }
 }
 
-homeTown();
+guessHome();
 
 function bacon() {
 
@@ -143,15 +140,63 @@ function guessPet() {
 
 guessPet();
 
+
+
+
+playGames();
+
+//Question 6
+
+function guessPet() {
+  let magicNumber = 4;
+
+  let userAttempt = 4;
+
+  let correct = false;
+
+
+ petGuess: while (userAttempt){
+    let userGuess = prompt('Guess how many pets I have?');
+    userAttempt--;
+    if (parseInt(userGuess) > magicNumber) {
+      //console.log(`Whoah, that is alot of pets. I am sorry ${userName} try guessing a smaller number. You have ${userAttempt} tries left.`);
+      alert(`Whoah, that is alot of pets. I am sorry ${userName} try guessing a smaller number. You have ${userAttempt} tries left.`);
+    }
+    if (parseInt(userGuess) < magicNumber) {
+      //console.log(`That guess is a little low. How about you guess a larger number ${userName}. You have ${userAttempt} attempts left.`);
+      alert(`That guess is a little low. How about you guess a larger number ${userName}. You have ${userAttempt} attempts left.`);
+    }
+    if (parseInt(userGuess) === magicNumber) {
+      correct = true;
+    }
+    if (correct) {
+      //console.log(`That is correct ${userName} I have 3 cats and 1 dog.`);
+      alert(`That is correct ${userName} I have 3 cats and 1 dog.`);
+      correctAnswers++;
+      break petGuess;
+    }
+    if (userAttempt === 0 && parseInt(userGuess) !== magicNumber) {
+      //console.log(`I am sorry you did not guess that I have four pets ${userName} better luck next time.`);
+      alert(`I am sorry you did not guess that I have four pets ${userName} better luck next time.`);
+    }
+    alert(`That is incorrect ${userName} you have ${totalUserGuesses} guesses left.`);
+  }
+  if (! totalUserGuesses) {
+    alert(`Looks like you ran out of guesses ${userName} these are the correct answers ${cities}`);
+  }
+}
+
+guessPet();
+
 // Question 7
 
-let cities = ['chicago', 'denver', 'dallas', 'boston', 'laramie', 'fort collins'];
+function guessCities() {
+  let cities = ['chicago', 'denver', 'dallas', 'boston', 'laramie', 'fort collins'];
 
-let totalUserGuesses = 6;
+  let totalUserGuesses = 6;
 
-correct = false;
+  let correct = false;
 
-function guessCity() {
   cityGuess: while (totalUserGuesses) {
     let userCityGuess = prompt('Guess a city in the United States I have lived in.').toLowerCase();
     totalUserGuesses--;
@@ -170,8 +215,7 @@ function guessCity() {
   }
 }
 
-guessCity();
+guessCities();
 
-// How Well You Did ---------------------------------------------------------------------------------------
-
+// How Well You Did on ---------------------------------------------------------------------------------------
 alert(`${userName} you got ${correctAnswers} questions out of 7 correct. I hope you enjoyed getting to know me better.`);
