@@ -129,8 +129,6 @@ cityGuess: while (totalUserGuesses) {
   for (let j = 0; j < cities.length; j++) {
     if (userCityGuess === cities[j]) {
       correct = true;
-    }
-    if (correct) {
       alert(`That is correct ${userName} your stalker skills have improved by +1.`);
       correctAnswers++;
       break cityGuess;
@@ -141,6 +139,6 @@ cityGuess: while (totalUserGuesses) {
 if (! totalUserGuesses) {
   alert(`Looks like you ran out of guesses ${userName} these are the correct answers ${cities}`);
 }
-// How Well You Did ---------------------------------------------------------------------------------------
+// How Well You Did on ---------------------------------------------------------------------------------------
 
 alert(`${userName} you got ${correctAnswers} questions out of 7 correct. I hope you enjoyed getting to know me better.`);
