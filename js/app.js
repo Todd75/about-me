@@ -44,20 +44,24 @@ function guessService() {
 
 guessService();
 
-let homeTown = prompt('Do you think I am from Illinois?').toUpperCase();
-while (homeTown !== 'NO' && homeTown !== 'N' && homeTown !== 'YES' && homeTown !== 'Y'){
-  homeTown = prompt('Please answer with a yes or a no... Thank you!').toUpperCase();
+function guessHome() {
+  let homeTown = prompt('Do you think I am from Illinois?').toUpperCase();
+  while (homeTown !== 'NO' && homeTown !== 'N' && homeTown !== 'YES' && homeTown !== 'Y'){
+    homeTown = prompt('Please answer with a yes or a no... Thank you!').toUpperCase();
+  }
+  // console.log(homeTown);
+  if (homeTown === 'YES' || homeTown === 'Y'){
+    console.log('That is correct I am from Illinois.');
+    alert(userName + ', you were right I am from Illinois');
+    correctAnswers++;
+  }
+  if (homeTown === 'NO' || homeTown === 'N'){
+    console.log('Sorry, that is incorrect I am from Illinois.');
+    alert('Sorry, that is incorrect I am from Illinois ' + userName + '.');
+  }
 }
-// console.log(homeTown);
-if (homeTown === 'YES' || homeTown === 'Y'){
-  console.log('That is correct I am from Illinois.');
-  alert(userName + ', you were right I am from Illinois');
-  correctAnswers++;
-}
-if (homeTown === 'NO' || homeTown === 'N'){
-  console.log('Sorry, that is incorrect I am from Illinois.');
-  alert('Sorry, that is incorrect I am from Illinois ' + userName + '.');
-}
+
+guessHome();
 
 let loveBacon = prompt('Do you think bacon is one of my favorite foods ' + userName + '?').toUpperCase();
 while (loveBacon !== 'YES' && loveBacon !== 'Y' && loveBacon !== 'NO' && loveBacon !== 'N'){
