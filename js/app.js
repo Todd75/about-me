@@ -26,19 +26,23 @@ function dogs() {
 
 dogs();
 
-let service = prompt('Did I serve in the US military?').toLowerCase();
-while (service !== 'no' && service !== 'n' && service !== 'yes' && service !== 'y'){ 
-  service = prompt('Please reply with a yes or a no ' + userName + '. Thanks!').toLowerCase();}
-// console.log(service);
-if (service === 'yes' || service === 'y'){
-  console.log('That is correct I served in the US Army at Fort Bragg in North Carolina.');
-  alert('That is correct ' + userName + ' I served in the US Army at Fort Bragg in North Carolina.');
-  correctAnswers++;
+function guessService() {
+  let service = prompt('Did I serve in the US military?').toLowerCase();
+  while (service !== 'no' && service !== 'n' && service !== 'yes' && service !== 'y'){ 
+    service = prompt('Please reply with a yes or a no ' + userName + '. Thanks!').toLowerCase();}
+  // console.log(service);
+  if (service === 'yes' || service === 'y'){
+    console.log('That is correct I served in the US Army at Fort Bragg in North Carolina.');
+    alert('That is correct ' + userName + ' I served in the US Army at Fort Bragg in North Carolina.');
+    correctAnswers++;
+  }
+  if (service === 'no' || service === 'n'){
+    console.log('That is incorrect I served at Fort Bragg in the US Army.');
+    alert('That is incorrect ' + userName + ' I served at Fort Bragg in the US Army.');
+  }
 }
-if (service === 'no' || service === 'n'){
-  console.log('That is incorrect I served at Fort Bragg in the US Army.');
-  alert('That is incorrect ' + userName + ' I served at Fort Bragg in the US Army.');
-}
+
+guessService();
 
 let homeTown = prompt('Do you think I am from Illinois?').toUpperCase();
 while (homeTown !== 'NO' && homeTown !== 'N' && homeTown !== 'YES' && homeTown !== 'Y'){
