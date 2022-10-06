@@ -63,19 +63,23 @@ function guessHome() {
 
 guessHome();
 
-let loveBacon = prompt('Do you think bacon is one of my favorite foods ' + userName + '?').toUpperCase();
-while (loveBacon !== 'YES' && loveBacon !== 'Y' && loveBacon !== 'NO' && loveBacon !== 'N'){
-  loveBacon = prompt('I am sorry ' + userName + ' but please respond with a yes or no.').toUpperCase();}
-console.log(loveBacon);
-if (loveBacon === 'YES' || loveBacon === 'Y'){
-  console.log('That is correct ' + userName + ' almost everybody loves bacon.');
-  alert('That is correct ' + userName + ' almost everybody loves bacon.');
-  correctAnswers++;
+function bacon() {
+  let loveBacon = prompt('Do you think bacon is one of my favorite foods ' + userName + '?').toUpperCase();
+  while (loveBacon !== 'YES' && loveBacon !== 'Y' && loveBacon !== 'NO' && loveBacon !== 'N'){
+    loveBacon = prompt('I am sorry ' + userName + ' but please respond with a yes or no.').toUpperCase();}
+  console.log(loveBacon);
+  if (loveBacon === 'YES' || loveBacon === 'Y'){
+    console.log('That is correct ' + userName + ' almost everybody loves bacon.');
+    alert('That is correct ' + userName + ' almost everybody loves bacon.');
+    correctAnswers++;
+  }
+  if (loveBacon === 'NO' || loveBacon === 'N'){
+    console.log('What!? That is incorrect ' + userName + ' I definately love bacon.');
+    alert('What!? That is incorrect ' + userName + ' I definately love bacon.');
+  }
 }
-if (loveBacon === 'NO' || loveBacon === 'N'){
-  console.log('What!? That is incorrect ' + userName + ' I definately love bacon.');
-  alert('What!? That is incorrect ' + userName + ' I definately love bacon.');
-}
+
+bacon();
 
 let videoGames = prompt('Do you think I play video games ' + userName + '?').toLowerCase();
 while (videoGames !== 'yes' && videoGames !== 'y' && videoGames !== 'no' && videoGames !== 'n'){
