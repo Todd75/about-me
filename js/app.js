@@ -140,28 +140,33 @@ guessPet();
 
 // Question 7
 
-let cities = ['chicago', 'denver', 'dallas', 'boston', 'laramie', 'fort collins'];
+function guessCities() {
+  let cities = ['chicago', 'denver', 'dallas', 'boston', 'laramie', 'fort collins'];
 
-let totalUserGuesses = 6;
+  let totalUserGuesses = 6;
 
-correct = false;
+  let correct = false;
 
-cityGuess: while (totalUserGuesses) {
-  let userCityGuess = prompt('Guess a city in the United States I have lived in.').toLowerCase();
-  totalUserGuesses--;
-  for (let j = 0; j < cities.length; j++) {
-    if (userCityGuess === cities[j]) {
-      correct = true;
-      alert(`That is correct ${userName} your stalker skills have improved by +1.`);
-      correctAnswers++;
-      break cityGuess;
+  cityGuess: while (totalUserGuesses) {
+    let userCityGuess = prompt('Guess a city in the United States I have lived in.').toLowerCase();
+    totalUserGuesses--;
+    for (let j = 0; j < cities.length; j++) {
+      if (userCityGuess === cities[j]) {
+        correct = true;
+        alert(`That is correct ${userName} your stalker skills have improved by +1.`);
+        correctAnswers++;
+        break cityGuess;
+      }
     }
+    alert(`That is incorrect ${userName} you have ${totalUserGuesses} guesses left.`);
   }
-  alert(`That is incorrect ${userName} you have ${totalUserGuesses} guesses left.`);
+  if (! totalUserGuesses) {
+    alert(`Looks like you ran out of guesses ${userName} these are the correct answers ${cities}`);
+  }
 }
-if (! totalUserGuesses) {
-  alert(`Looks like you ran out of guesses ${userName} these are the correct answers ${cities}`);
-}
+
+guessCities();
+
 // How Well You Did on ---------------------------------------------------------------------------------------
 
 alert(`${userName} you got ${correctAnswers} questions out of 7 correct. I hope you enjoyed getting to know me better.`);
