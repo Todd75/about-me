@@ -102,37 +102,42 @@ playGames();
 
 //Question 6
 
-let magicNumber = 4;
+function guessPet() {
+  let magicNumber = 4;
 
-let userAttempt = 4;
+  let userAttempt = 4;
 
-let correct = false;
+  let correct = false;
 
-petGuess: while (userAttempt){
-  let userGuess = prompt('Guess how many pets I have?');
-  userAttempt--;
-  if (parseInt(userGuess) > magicNumber) {
-    //console.log(`Whoah, that is alot of pets. I am sorry ${userName} try guessing a smaller number. You have ${userAttempt} tries left.`);
-    alert(`Whoah, that is alot of pets. I am sorry ${userName} try guessing a smaller number. You have ${userAttempt} tries left.`);
-  }
-  if (parseInt(userGuess) < magicNumber) {
-    //console.log(`That guess is a little low. How about you guess a larger number ${userName}. You have ${userAttempt} attempts left.`);
-    alert(`That guess is a little low. How about you guess a larger number ${userName}. You have ${userAttempt} attempts left.`);
-  }
-  if (parseInt(userGuess) === magicNumber) {
-    correct = true;
-  }
-  if (correct) {
-    //console.log(`That is correct ${userName} I have 3 cats and 1 dog.`);
-    alert(`That is correct ${userName} I have 3 cats and 1 dog.`);
-    correctAnswers++;
-    break petGuess;
-  }
-  if (userAttempt === 0 && parseInt(userGuess) !== magicNumber) {
-    //console.log(`I am sorry you did not guess that I have four pets ${userName} better luck next time.`);
-    alert(`I am sorry you did not guess that I have four pets ${userName} better luck next time.`);
+  petGuess: while (userAttempt){
+    let userGuess = prompt('Guess how many pets I have?');
+    userAttempt--;
+    if (parseInt(userGuess) > magicNumber) {
+      //console.log(`Whoah, that is alot of pets. I am sorry ${userName} try guessing a smaller number. You have ${userAttempt} tries left.`);
+      alert(`Whoah, that is alot of pets. I am sorry ${userName} try guessing a smaller number. You have ${userAttempt} tries left.`);
+    }
+    if (parseInt(userGuess) < magicNumber) {
+      //console.log(`That guess is a little low. How about you guess a larger number ${userName}. You have ${userAttempt} attempts left.`);
+      alert(`That guess is a little low. How about you guess a larger number ${userName}. You have ${userAttempt} attempts left.`);
+    }
+    if (parseInt(userGuess) === magicNumber) {
+      correct = true;
+    }
+    if (correct) {
+      //console.log(`That is correct ${userName} I have 3 cats and 1 dog.`);
+      alert(`That is correct ${userName} I have 3 cats and 1 dog.`);
+      correctAnswers++;
+      break petGuess;
+    }
+    if (userAttempt === 0 && parseInt(userGuess) !== magicNumber) {
+      //console.log(`I am sorry you did not guess that I have four pets ${userName} better luck next time.`);
+      alert(`I am sorry you did not guess that I have four pets ${userName} better luck next time.`);
+    }
   }
 }
+
+guessPet();
+
 // Question 7
 
 let cities = ['chicago', 'denver', 'dallas', 'boston', 'laramie', 'fort collins'];
