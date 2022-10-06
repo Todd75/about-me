@@ -64,7 +64,6 @@ function guessHome() {
 guessHome();
 
 function bacon() {
-
   let loveBacon = prompt('Do you think bacon is one of my favorite foods ' + userName + '?').toUpperCase();
   while (loveBacon !== 'YES' && loveBacon !== 'Y' && loveBacon !== 'NO' && loveBacon !== 'N'){
     loveBacon = prompt('I am sorry ' + userName + ' but please respond with a yes or no.').toUpperCase();}
@@ -83,7 +82,6 @@ function bacon() {
 bacon();
 
 function playVideoGames() {
-
   let videoGames = prompt('Do you think I play video games ' + userName + '?').toLowerCase();
   while (videoGames !== 'yes' && videoGames !== 'y' && videoGames !== 'no' && videoGames !== 'n'){
     videoGames = prompt('I am sorry ' + userName + ', but please respond with a yes or a no.').toLowerCase();
@@ -101,7 +99,6 @@ function playVideoGames() {
 }
 
 playVideoGames();
-
 
 //Question 6
 
@@ -140,63 +137,13 @@ function guessPet() {
 
 guessPet();
 
-
-
-
-playGames();
-
-//Question 6
-
-function guessPet() {
-  let magicNumber = 4;
-
-  let userAttempt = 4;
-
-  let correct = false;
-
-
- petGuess: while (userAttempt){
-    let userGuess = prompt('Guess how many pets I have?');
-    userAttempt--;
-    if (parseInt(userGuess) > magicNumber) {
-      //console.log(`Whoah, that is alot of pets. I am sorry ${userName} try guessing a smaller number. You have ${userAttempt} tries left.`);
-      alert(`Whoah, that is alot of pets. I am sorry ${userName} try guessing a smaller number. You have ${userAttempt} tries left.`);
-    }
-    if (parseInt(userGuess) < magicNumber) {
-      //console.log(`That guess is a little low. How about you guess a larger number ${userName}. You have ${userAttempt} attempts left.`);
-      alert(`That guess is a little low. How about you guess a larger number ${userName}. You have ${userAttempt} attempts left.`);
-    }
-    if (parseInt(userGuess) === magicNumber) {
-      correct = true;
-    }
-    if (correct) {
-      //console.log(`That is correct ${userName} I have 3 cats and 1 dog.`);
-      alert(`That is correct ${userName} I have 3 cats and 1 dog.`);
-      correctAnswers++;
-      break petGuess;
-    }
-    if (userAttempt === 0 && parseInt(userGuess) !== magicNumber) {
-      //console.log(`I am sorry you did not guess that I have four pets ${userName} better luck next time.`);
-      alert(`I am sorry you did not guess that I have four pets ${userName} better luck next time.`);
-    }
-    alert(`That is incorrect ${userName} you have ${totalUserGuesses} guesses left.`);
-  }
-  if (! totalUserGuesses) {
-    alert(`Looks like you ran out of guesses ${userName} these are the correct answers ${cities}`);
-  }
-}
-
-guessPet();
-
 // Question 7
 
+let cities = ['chicago', 'denver', 'dallas', 'boston', 'laramie', 'fort collins'];
+
+let totalUserGuesses = 6;
+
 function guessCities() {
-  let cities = ['chicago', 'denver', 'dallas', 'boston', 'laramie', 'fort collins'];
-
-  let totalUserGuesses = 6;
-
-  let correct = false;
-
   cityGuess: while (totalUserGuesses) {
     let userCityGuess = prompt('Guess a city in the United States I have lived in.').toLowerCase();
     totalUserGuesses--;
