@@ -81,21 +81,24 @@ function bacon() {
 
 bacon();
 
-let videoGames = prompt('Do you think I play video games ' + userName + '?').toLowerCase();
-while (videoGames !== 'yes' && videoGames !== 'y' && videoGames !== 'no' && videoGames !== 'n'){
-  videoGames = prompt('I am sorry ' + userName + ', but please respond with a yes or a no.').toLowerCase();
-}
-console.log(videoGames);
-if (videoGames === 'yes' || videoGames === 'y'){
-  console.log('That is correct ' + userName + ' I got my first Nintendo in 1985.');
-  alert('That is correct ' + userName + ' I got my first Nintendo in 1985.');
-  correctAnswers++;
-}
-if (videoGames === 'no' || videoGames === 'n'){
-  console.log('That is incorrect ' + userName + ' I have been playing video games for over thirty years.');
-  alert('That is incorrect ' + userName + ' I have been playing video games for over thirty years.');
+function playGames() {
+  let videoGames = prompt('Do you think I play video games ' + userName + '?').toLowerCase();
+  while (videoGames !== 'yes' && videoGames !== 'y' && videoGames !== 'no' && videoGames !== 'n'){
+    videoGames = prompt('I am sorry ' + userName + ', but please respond with a yes or a no.').toLowerCase();
+  }
+  console.log(videoGames);
+  if (videoGames === 'yes' || videoGames === 'y'){
+    console.log('That is correct ' + userName + ' I got my first Nintendo in 1985.');
+    alert('That is correct ' + userName + ' I got my first Nintendo in 1985.');
+    correctAnswers++;
+  }
+  if (videoGames === 'no' || videoGames === 'n'){
+    console.log('That is incorrect ' + userName + ' I have been playing video games for over thirty years.');
+    alert('That is incorrect ' + userName + ' I have been playing video games for over thirty years.');
+  }
 }
 
+playGames();
 
 //Question 6
 
