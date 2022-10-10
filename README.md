@@ -8,9 +8,11 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 ### Links and Resources
 
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
-
+- [JavaScript Objects Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
+- [Introduction to the Dom](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+- [Applying color to HTML elements using CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Images in HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Image file type and format guide](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types)
 
 
 ### Reflections and Comments
